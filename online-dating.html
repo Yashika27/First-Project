@@ -1,117 +1,96 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Fixed top navbar example · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/navbar-fixed/">
+
+    <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<style>
-  body{
-margin: 20px;
-background-color: #333;
-  }
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: green;
-  color: white;
-    padding: 10px;
-}
-h1{
-color: black;
-font-family: Arial;
-text-align: center;
-background-color: green;
-padding: 10px;
-color: white;
-
-}
-h2{
-  color: white;
-}
-
-img{
-float: right;
-padding: 10px;
-}
-
-p
-{
-color: white;
-font-family: bahnschrift;
-}
-a.likes{
-    color: white;
-}
-a.comments{
-  color: white;
-}
-input[type=text] {
-  background-color: white;
-  color: White;
-border: 1px solid lightgrey;
-width: 100%;
-}
-
-input[type=reset], input[type=submit]
-{
-background-color: green;
-font-size: 16px;
-color: white;
-padding-bottom: 5px;
-    padding-right: 10px;
-    border-radius: 5px;
-}
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
 
 
-  ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-    color: white;
+    <style>
+        body{
+            margin: 10px;
+        }
+        h1{
+            text-align: center! important;
+        }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        .jumbotron {
+    padding: 2rem 2rem;
 }
-
-</style>
-</head>
-<body>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-<div class="topnav">
-  <a class="active" href="online-dating.html">Writing</a>
-  <a href="contact.html">Contact</a>
-  <a href="exp.html">About</a>
-    <a href="index-signin.html" style="float: right!important">Sign Up</a>
-</div>
-<header>
-<h1>DATING: THEN AND NOW</h1>
-</header>
+      }
+#hp{
+    float: right;
+    padding: 15px;
+}
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="navbar-top-fixed.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="exp.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="index-signin.html">Sign Up</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+    <main role="main" class="container">
+  <div class="jumbotron">
+   <h1>DATING: THEN AND NOW</h1>
+  </div>
+</main>
 <br><p>With advancement in technology, relationships have revolutionalized to online level. About 10 years ago people used to meet through common friends and family but 10 years hence there has been a gigantic shift of dating culture to online dating. Almost everything is just a click (swipe XD) away. We can order food, groceries, clothes, shoes, furniture, books and more, online. All this has made our lives much simpler and more comfortable. Therefore, it only seems to be easier to find a partner on the internet than in person. There are several dating applications like tinder, bumble, meet me, woo etc. that are now available with the aim to help people find love.
 </p>
-<img src="online-dating.jpg">
+<img src="online-dating.jpg" id="hp">
 
 <p>Joining dating apps is easy, one just needs to download the application and upload a few photos. You write about yourself, your interests and give your location. After mentioning a few details, you start getting suggestions of people to connect with. If you like someone you right swipe them and if you don�t then you left swipe them and this goes on. After connecting, people send each other messages and that�s how it all starts. You are likely to find anyone and everyone in your local area on dating apps.
 </p>
-
 
 
 <p>
@@ -126,31 +105,25 @@ To make online dating experience better one should verify their account and also
 </p>
 <p>
 Dating apps are there to help us find people to connect with but such apps shouldn�t be taken too seriously, the best way to date a person is to meet them in reality and know them for who they are without online filters.
-</p><br><br>
+</p>
 
-
+<div class="jumbotron">
 <form action="/action_page.php" class="likes">
-<label for="liked">Liked : </label><br><br>
+<label for="liked">Liked : </label>
 <input type="radio" id="yes" name="liked">
-<label for="Yes">Yes</label><br>
+<label for="Yes">Yes</label>
 <input type="radio" id="No" name="liked">
-<label for="No">No</label><br><br><br>
+<label for="No">No</label><br>
 
 </form>
 
-<form action="/action_page.php" class="comments">
-<label for="Comment">Comments: </label><br><br>
+<form action="/action_page.php" class="comments"><br>
+<label for="Comment">Comments: </label><br>
 <input type="text" id="Comment" name="Comment" size="100">
 <br><br>
 <input type="reset" value="Reset">
 <input type="submit" value="Submit"><br><br>
 </form>
-
-<br><br><h2>Popular searches include...</h2><br>
-
- <p> <a href="Social-media.html">Social Media</a><br>
-  <a href="Demonetisation.html">Demonetisation</a><br>
-  <a href="Faulty-education-system.html">Faulty Education System</a>
-</p>
+</div>
 </body>
 </html>
